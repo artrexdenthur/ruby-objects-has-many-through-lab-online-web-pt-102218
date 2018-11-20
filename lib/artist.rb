@@ -12,7 +12,8 @@ class Artist
   end
   
   def new_song(name, genre)
-    @songs << Song.new(name, genre)
+    @songs << Song.new(name)
+    @songs.last.set_genre(genre)
   end
   
   ########### Class methods ############
