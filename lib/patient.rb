@@ -17,7 +17,11 @@ class Patient
     new_app
   end
 
-  
+  def doctors
+    @appointments.reduce([]) do |doctors, app|
+      doctors << app.doctor if app.patient == self
+    end
+  end
   ########### Class methods ############
   
   def self.all
