@@ -11,6 +11,8 @@ class Doctor
   
   
   
+  ########### Class methods ############
+  
   def self.all
     @@all
   end
