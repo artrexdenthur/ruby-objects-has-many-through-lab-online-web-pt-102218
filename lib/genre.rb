@@ -7,7 +7,7 @@ class Genre
   end
   
   def songs
-    Songs.all.collect { |song| song.genre.name == self.name }
+    Song.all.collect { |song| song.genre.name == self.name }
   end
   
 end
