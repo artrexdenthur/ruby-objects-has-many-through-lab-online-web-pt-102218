@@ -18,6 +18,10 @@ class Doctor
     new_app
   end
   
+  def patients
+    @appointments.select { |app| app.doctor == self }.patient
+  end
+  
   ########### Class methods ############
   
   def self.all
