@@ -19,7 +19,9 @@ class Doctor
   end
   
   def patients
-    @appointments.select { |app| app.doctor == self }.patient
+    @appointments.reduce([]) do |patients, app|
+      patients << app.patient if app.doctor == self
+    end
   end
   
   ########### Class methods ############
