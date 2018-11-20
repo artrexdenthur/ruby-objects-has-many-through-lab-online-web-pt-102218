@@ -19,6 +19,9 @@ class Artist
     new_song
   end
   
+  def genres
+    @songs.collect { |song| song.genre }.uniq
+  
   ########### Class methods ############
   
   def self.all
