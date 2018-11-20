@@ -12,5 +12,10 @@ class Genre
     Song.all.select { |song| song.genre.name == self.name }
   end
   
+  ########### Class methods ############
+  
+  def self.all
+    @@all
+  end
   
 end
